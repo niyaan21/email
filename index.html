@@ -130,7 +130,7 @@
      createUserWithEmailAndPassword(auth, email, password)
          .then((userCredential) => {
              const user = userCredential.user;
-             window.location.href = 'demo/demo.html';
+             window.location.href = 'components/price/index.html';
 
              // Store user info in Firestore
              return setDoc(doc(db, 'users', user.uid), {
