@@ -130,7 +130,6 @@
      createUserWithEmailAndPassword(auth, email, password)
          .then((userCredential) => {
              const user = userCredential.user;
-             alert('User registered successfully');
              window.location.href = 'demo/demo.html';
 
              // Store user info in Firestore
@@ -153,7 +152,7 @@
 
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                alert('User logged in successfully');
+                console.log('User logged in successfully');
                 window.location.href = 'fullpotential/index.html'; // Redirect to the full potential page after login
             })
             .catch((error) => {
