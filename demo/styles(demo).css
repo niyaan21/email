@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* Animation Keyframes */
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+body {
+  padding-bottom: 100px;
+  background-color: #222;
+  background: linear-gradient(to right, #000000, #333333);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 60px;
+  color: #ddd;
+}
+
+/* User Input Section */
+.user-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 300px;
+}
+
+.user-input input[type="email"],
+.user-input input[type="password"] {
+  width: 300px;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-input button {
+  padding: 12px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.user-input button:hover {
+  background-color: #45a049;
+}
+
+/* Loading Indicator Styles */
+#loading-indicator {
+  display: none;  
+  position: fixed; 
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -50%);  
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 20px 40px; 
+  border-radius: 10px; 
+  color: white; 
+  z-index: 1000;  
+  text-align: center; 
+  font-size: 24px;  
+}
+
+#loading-text, #loading-percentage {
+  margin: 10px 0;  
+}
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  width: 320px;  
+  margin-top: 20px;
+}
+
+.submit-button {
+  padding: 12px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Google Sign-In Button Styling */
+.g_id_signin {
+  display: flex;  
+  justify-content: flex-end;
+}
+
+/* Email Summary Section */
+.email-summary {
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 1000px;
+  text-align: center;
+  color: white;
+}
+
+.email-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.email-box {
+  background-color: #111;  
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-box:hover {
+  border-color: #4a90e2;  
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.email-box h3 {
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+.email-box p {
+  color: #fff;
+}
+
+/* Summary Window */
+.summary-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+/* Attachment Link Styling */
+.attachments a {
+  color: #4a90e2;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.attachments a:hover {
+  color: #2196F3;
+}
+
+.attachments h4 {
+  margin-bottom: 10px;
+}
+
+
+
+/* Add the rest of your floating elements like the above */

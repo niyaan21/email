@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #111;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.pricing-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plan {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(25% - 20px); /* adjust the width to fit 4 plans in a row */
+    margin: 20px;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.plan h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.plan .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.plan .price span {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.plan ul.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.plan ul.features li {
+    padding: 8px 0;
+    color: #bbb;
+    border-bottom: 1px solid #444;
+}
+
+.plan ul.features li:last-child {
+    border-bottom: none;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.plan.gold, .plan.platinum {
+    width: 50%; /* make Platinum and Gold plans wider */
+    margin: 20px auto; /* center them horizontally */
+    clear: both; /* move them to a new line */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .pricing-plans {
+        flex-wrap: wrap;
+    }
+    .plan {
+        width: calc(50% - 20px); /* adjust the width to fit 2 plans in a row */
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-plans {
+        flex-wrap: wrap;
+    }
+    .plan {
+        width: 100%; /* make plans full-width on mobile */
+        margin-bottom: 30px;
+    }
+}
