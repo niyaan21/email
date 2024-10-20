@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.theme-switch {
+    position: relative;
+}
+
+.theme-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    background: #444;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+#theme-toggle:checked + .theme-icon {
+    background: #fff;
+}
+
+.page-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.7); /* Transparent header */
+    border-bottom: 2px solid #444;
+    color: #fff;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Integrations Section */
+.integration-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 20px;
+}
+
+.integration-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #444;
+}
+
+.integration-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.integration-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.integration-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.integration-card p {
+    color: #ccc;
+}

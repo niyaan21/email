@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - SummarizeIt</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .theme-switch {
+            position: relative;
+        }
+
+        .theme-icon {
+            cursor: pointer;
+            width: 40px;
+            height: 20px;
+            background: #444;
+            border-radius: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        #theme-toggle:checked + .theme-icon {
+            background: #fff;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid #444;
+            color: #fff;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* Blog Section */
+        .blog-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 40px;
+            gap: 20px;
+        }
+
+        .blog-card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #444;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 100px; /* Adjusted height for icon images */
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .image{
+            width: 100%;
+            height: 100px; /* Adjusted height for icon images */
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            mix-blend-mode: multiply;
+        }
+        
+
+        .blog-image img {
+            max-width: 70%; /* Responsive size */
+            max-height: 70%; /* Responsive size */
+        }
+
+        .blog-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .blog-card p {
+            color: #ccc;
+        }
+
+        .g-image{
+            mix-blend-mode: multiply;
+            width: 100%;
+            height: 100px; /* Adjusted height for icon images */
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center
+            
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .read-more:hover {
+            background-color: #666;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            border-top: 2px solid #444;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Light Mode */
+        #theme-toggle:checked ~ body {
+            background: linear-gradient(135deg, #f4f4f4, #fff);
+            color: #000;
+        }
+
+        #theme-toggle:checked ~ body .navbar,
+        #theme-toggle:checked ~ body .footer,
+        #theme-toggle:checked ~ body .blog-card {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #theme-toggle:checked ~ body .blog-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #theme-toggle:checked ~ body .page-header {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    </nav>
+
+    <header class="page-header">
+        <h1>Our Blog</h1>
+        <p>Stay updated with the latest news, tips, and stories from SummarizeIt.</p>
+    </header>
+
+    <section class="blog-list">
+        <div class="blog-card">
+            <div class="g-image">
+                <img src="https://img.icons8.com/windows/50/new-post.png" alt="new-post" alt="Email Productivity">
+            </div>
+            <h2>Email Productivity Tips</h2>
+            <p>Learn how to boost your productivity by organizing your emails effectively and getting concise summaries.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="https://img.icons8.com/ios/100/ffffff/artificial-intelligence.png" alt="AI Summarizing">
+            </div>
+            <h2>Summarizing Emails with AI</h2>
+            <p>Explore how AI can help you manage and summarize your emails faster than ever before.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+
+        <div class="blog-card">
+            <div class="image" >
+                <img src="data:image/jpeg;base64,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" alt="Integrations">
+            </div>
+            <h2>Top Integrations</h2>
+            <p>Discover the top tools you can integrate with SummarizeIt to streamline your workflow.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="https://img.icons8.com/ios/100/ffffff/lock.png" alt="Email Security">
+            </div>
+            <h2>Keeping Your Emails Secure</h2>
+            <p>Learn about our security measures and how we keep your email data safe and private.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 SummarizeIt. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#">🔗</a>
+            <a href="#">🔗</a>
+            <a href="#">🔗</a>
+        </div>
+    </footer>
+</body>
+</html>
