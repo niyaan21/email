@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Sign-In</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <div id="g-signin2"></div>
+    <div id="user-info"></div>
+
+    <script>
+        window.onload = function() {
+            gapi.load('auth2', function() {
+                gapi.auth2.init({
+                    client_id: '707809225486-qs8elc8gokrbgrr2r50dtqf6kv6litjj.apps.googleusercontent.com' // Replace with your actual client ID
+                }).then(function() {
+                    gapi.signin2.render('g-signin2', {
+                        'scope': 'profile email',
+                        'width': 240,
+                        'height': 50,
+                        'longtitle': true,
+                        'theme': 'dark'
+                    });
+                });
+            });
+        };
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            document.getElementById('user-info').innerHTML = `
+                <p>ID: ${profile.getId()}</p>
+                <p>Name: ${profile.getName()}</p>
+                <p>Image URL: ${profile.getImageUrl()}</p>
+                <p>Email: ${profile.getEmail()}</p>
+            `;
+        }
+
+        function onFailure(error) {
+            console.error(error);
+        }
+    </script>
+</body>
+</html>
